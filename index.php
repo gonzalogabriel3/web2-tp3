@@ -5,7 +5,7 @@ require 'cabecera.php';
 ?>
  
 <h1 style="font-size: 60px;color: blue;display: inline-block">Clientes</h1>
-<center><a class="btn btn-primary" style="display: inline-block;text-align: right;" href="ProcesarFormulario2.php">Nuevo Cliente</a></center>
+<center><a class="btn btn-primary" style="display: inline-block;text-align: right;" href="ProcesarFormulario.php">Nuevo Cliente</a></center>
 <br><br>   
 <!--Tabla-->
     <table class="table table-hover">
@@ -18,6 +18,7 @@ require 'cabecera.php';
         <th style="font-size: 20px;">Activo</th>
         <th></th>
       </tr>
+      
     </thead>
    
  <?php foreach($modelo->Listar() as $r): ?>
@@ -36,10 +37,10 @@ require 'cabecera.php';
     <td><b><?php echo $r->__get('nacionalidad');?></b></td>
     <td><img style="display:inline;width:55px;" src="<?php echo $act;?>"></td>
     <td>
-        <a href="?editar&id<?php echo $r->id; ?>"><button class="btn btn-info" >Modificar</button></a>
+        <a href="ProcesarFormularioEditar.php?id=<?php echo $r->id; ?>"><button class="btn btn-info" >Modificar</button></a>
     </td>
     <td>
-        <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?action=eliminar&id=<?php echo $r->id ?>"><button class="btn btn-danger">Borrar</button></a>
+        <a onclick="javascript:return confirm('¿Seguro que quiere eliminar a este cliente?');" href="?action=eliminar&id=<?php echo $r->id ?>"><button class="btn btn-danger">Borrar</button></a>
     </td>
   </tr> 
  <?php endforeach; ?>

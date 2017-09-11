@@ -1,8 +1,8 @@
 <?php require_once 'cabecera.php'; ?>
 
-<center><h2 style="color: green"><b>FORMULARIO</b></h2></center>
+<center><h2 style="color: green"><b>Registro Cliente</b></h2></center>
 
-<form id="frmCliente" method="post" action="ProcesarFormulario2.php">
+<form  method="post" action="ProcesarFormulario.php">
     
     <?php 
         /*Si mi formulario contiene errores los notificos
@@ -52,7 +52,11 @@
         <label class="control-label" for="nac">Nacionalidad</label>
         <select class="form-control" name="nacionalidad" id="nac">
             
-                <?php foreach ($miFormulario->nacionalidades as $key => $item){                     
+                <?php foreach ($miFormulario->nacionalidades as $key => $item){
+                    if($miFormulario->getValor('nacionalidad')==$item){
+                        echo "<option selected>".$item."</option>";
+                    }
+                    
                     echo "<option>".$item."</option>";        
                 }?> 
             
@@ -67,7 +71,7 @@
     </div>
     
     <!--Enviar/boton -->
-    <center><button type="submit" class="btn btn-primary center">Enviar Formulario</button></center>
+    <center><button type="submit" class="btn btn-primary center">Registrar Cliente</button></center>
     
     
 </form>

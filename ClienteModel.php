@@ -104,7 +104,7 @@ Class ClienteModel{
       $edad= $this->calcularEdad($data->__get('fechaNac'));
       
       try{
-          $sql="UPDATE clientes SET"
+          $sql="UPDATE clientes SET "
                   . "apellido = ?"
                   . "nombre = ?"
                   . "edad = ?"
@@ -117,9 +117,10 @@ Class ClienteModel{
                     array(
                        $data->__get('apellido'),
                        $data->__get('nombre'),
-                       $data->__get('edad'),
+                       $edad,
                        $data->__get('nacionalidad'),
-                       $data->__get('activo')    
+                       $data->__get('activo'),
+                       $data->__get('id')
                     )     
                  );
          
