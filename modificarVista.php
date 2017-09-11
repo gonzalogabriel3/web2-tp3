@@ -14,11 +14,6 @@ $cliente=new Cliente();
 //Al objeto de tipo cliente le asigno el cliente con el id que obtuve
 $cliente=$modelo->Obtener($idCliente);
 
-echo "id de mi cliente".$cliente->id;
-echo "<br>nombre del cliente es: ".$cliente->nombre;
-echo "<br>apellido del cliente es: ".$cliente->apellido;
-echo "<br>edad del cliente es: ".$cliente->edad;
-
 ?>
 
 <center><h2 style="color: green"><b>Editar Cliente</b></h2></center>
@@ -43,7 +38,7 @@ echo "<br>edad del cliente es: ".$cliente->edad;
     si hubo algun error se va a mostrar,si no tiene se mostrara una cadena vacia "" lo que no influye 
     en la vista del formulario
     -->
-    <input type="number" name="id" value="<?php echo $cliente->id?>" >
+    <input type="number" name="id" value="<?php echo $cliente->id?>" hidden >
     
     <!--Apellido -->
     <?php $tiene_error=$miFormulario->tieneError('apellido')? "has-error" : "";?>

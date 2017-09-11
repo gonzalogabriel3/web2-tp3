@@ -105,10 +105,10 @@ Class ClienteModel{
       
       try{
           $sql="UPDATE clientes SET "
-                  ."apellido = ?"
-                  ."nombre = ?"
-                  ."edad = ?"
-                  ."nacionalidad = ?"
+                  ."apellido = ?,"
+                  ."nombre = ?,"
+                  ."edad = ?,"
+                  ."nacionalidad = ?,"
                   ."activo = ?"
                   ."WHERE id = ?";
           
