@@ -72,7 +72,7 @@
     
     <!--Enviar/boton -->
     <center><button type="submit" class="btn btn-primary center">Registrar Cliente</button></center>
-    
+    <a href="index.php" style="display: inline;font-size: 20px;"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
     
 </form>
 

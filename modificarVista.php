@@ -43,7 +43,7 @@ echo "<br>edad del cliente es: ".$cliente->edad;
     si hubo algun error se va a mostrar,si no tiene se mostrara una cadena vacia "" lo que no influye 
     en la vista del formulario
     -->
-    <input type="number" name="id" value="<?php $cliente->id?>" hidden>
+    <input type="number" name="id" value="<?php echo $cliente->id?>" >
     
     <!--Apellido -->
     <?php $tiene_error=$miFormulario->tieneError('apellido')? "has-error" : "";?>
@@ -94,7 +94,7 @@ echo "<br>edad del cliente es: ".$cliente->edad;
     
     <!--Enviar/boton -->
     <center><button type="submit" class="btn btn-primary center">Actualizar datos del Cliente</button></center>
-    
+    <a href="index.php" style="display: inline;font-size: 20px;"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
     
 </form>
 

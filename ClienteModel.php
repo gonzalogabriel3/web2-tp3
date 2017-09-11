@@ -105,12 +105,12 @@ Class ClienteModel{
       
       try{
           $sql="UPDATE clientes SET "
-                  . "apellido = ?"
-                  . "nombre = ?"
-                  . "edad = ?"
-                  . "nacionalidad = ?"
-                  . "activo = ?"
-                  . "WHERE id = ?";
+                  ."apellido = ?"
+                  ."nombre = ?"
+                  ."edad = ?"
+                  ."nacionalidad = ?"
+                  ."activo = ?"
+                  ."WHERE id = ?";
           
          $this->pdo->prepare($sql) 
                  ->execute(
@@ -125,7 +125,7 @@ Class ClienteModel{
                  );
          
       } catch (Exception $ex) {
-            die($ex->getMessage());
+            die("<br>Error al actualizar los datos <br>".$ex->getMessage());
       }
       
   }
@@ -184,11 +184,6 @@ Class ClienteModel{
             $edad=($ano-$anonaz);
             return $edad;
    }
-  
-  
-  
-  
-    
-    
+      
 }
 
