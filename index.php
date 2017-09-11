@@ -40,7 +40,7 @@ require 'cabecera.php';
         <a href="ProcesarFormularioEditar.php?id=<?php echo $r->id; ?>"><button class="btn btn-info" >Modificar</button></a>
     </td>
     <td>
-        <a onclick="javascript:return confirm('¿Seguro que quiere eliminar a este cliente?');" href="?action=eliminar&id=<?php echo $r->id ?>"><button class="btn btn-danger">Borrar</button></a>
+        <a onclick="javascript:return confirm('¿Seguro que quiere eliminar a <?php echo $r->nombre." ".$r->apellido ?>?');" href="?action=eliminar&id=<?php echo $r->id ?>"><button class="btn btn-danger">Borrar</button></a>
     </td>
   </tr> 
  <?php endforeach; ?>
